@@ -14,12 +14,9 @@ public class Stimmungen {
         sammleStimmungen.put("Standard-Tuning", new String[]{"E", "A", "d", "g", "h", "e'"});
     }
 
-    public List<String> getStimmungen() {
-        List<String> stimmungen = new ArrayList<>();
-        for (String key : sammleStimmungen.keySet()) {
-            stimmungen.add(key);
-        }
-        return stimmungen;
+    public String[] getSaitenBelegung(String stimmung) {
+        String[] saitenBelegung = sammleStimmungen.get(stimmung);
+        return saitenBelegung;
     }
 
 }
