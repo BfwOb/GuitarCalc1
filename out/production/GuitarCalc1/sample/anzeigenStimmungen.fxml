@@ -115,7 +115,7 @@
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grundton"/>
                     </children>
                 </VBox>
-                <ComboBox fx:id="combGrundton" editable="true" layoutX="224.0" layoutY="48.0" prefWidth="150.0"/>
+                <ComboBox fx:id="combGrundton" editable="true" layoutX="224.0" layoutY="48.0" prefWidth="150.0" onAction="#combTuneAction"/>
             </children>
         </AnchorPane>
     </children>
