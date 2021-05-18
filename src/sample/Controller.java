@@ -4,9 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import org.supercsv.io.CsvListWriter;
+import org.supercsv.io.ICsvListWriter;
+import org.supercsv.prefs.CsvPreference;
 
+import java.io.IOException;
+import java.io.StringWriter;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -49,6 +55,7 @@ public class Controller implements Initializable {
             System.out.println("Stimmung wird gespeichert!");
             System.out.println(result.get());
             System.out.println(Arrays.toString(getValStrings()));
+            writeNewTuning2CSV(result.get(),getValStrings());
         }
     }
 
@@ -69,6 +76,22 @@ public class Controller implements Initializable {
 
         return saiten;
     }
+
+    public void writeNewTuning2CSV(String bezeichnung, int[] intervalle) {
+        StringWriter output = new StringWriter();
+        try (ICsvListWriter listWriter = new CsvListWriter(output,
+                CsvPreference.STANDARD_PREFERENCE)) {
+            StringBuilder intervalleString = new StringBuilder();
+            for (int j = 0; j < intervalle.length; j++) {
+                intervalleString.append(";" + intervalle[j]);
+            }
+            listWriter.write(bezeichnung + intervalleString);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(output.toString());
+    }
+
 
     @FXML
     private void combTuneAction(ActionEvent event) {
