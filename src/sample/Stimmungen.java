@@ -7,15 +7,15 @@ import java.util.Map;
 
 public class Stimmungen {
 
-    private static Map<String, String[]> sammleStimmungen;
+    private static Map<String, int[]> sammleStimmungen;
 
     static {
         sammleStimmungen = new HashMap<>();
-        sammleStimmungen.put("Standard-Tuning", new String[]{"E", "A", "d", "g", "h", "e'"});
-        sammleStimmungen.put("Major Thirds", new String[]{"E", "G#", "c", "e", "g#", "c'"});
+        sammleStimmungen.put("Standard-Tuning", new int[]{0, 5, 10, 15, 19, 24});
+        sammleStimmungen.put("Major Thirds", new int[]{0, 4, 8, 12, 16, 20});
     }
 
-    public String[] getSaitenBelegung(String stimmung) {
+    public int[] getSaitenBelegung(String stimmung) {
         return sammleStimmungen.get(stimmung);
     }
 

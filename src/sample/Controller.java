@@ -38,13 +38,30 @@ public class Controller implements Initializable {
     @FXML
     private void combTuneAction(ActionEvent event) {
         String chosenTune = combStimmung.getValue();
-        String [] allStrings = tunes.getSaitenBelegung(chosenTune);
-        combS1.setValue(allStrings[0]);
-        combS2.setValue(allStrings[1]);
-        combS3.setValue(allStrings[2]);
-        combS4.setValue(allStrings[3]);
-        combS5.setValue(allStrings[4]);
-        combS6.setValue(allStrings[5]);
+        int[] allStrings = tunes.getSaitenBelegung(chosenTune);
+        String getGrundton = combGrundton.getValue();
+        if (getGrundton == null) {
+            getGrundton = "E";
+        }
+        int valGrundton = notes.getVal(getGrundton);
+        // Saite 1
+        String s1 = notes.getNote(valGrundton + allStrings[0]);
+        combS1.setValue(s1);
+        // Saite 2
+        String s2 = notes.getNote(valGrundton + allStrings[1]);
+        combS2.setValue(s2);
+        // Saite 3
+        String s3 = notes.getNote(valGrundton + allStrings[2]);
+        combS3.setValue(s3);
+        // Saite 4
+        String s4 = notes.getNote(valGrundton + allStrings[3]);
+        combS4.setValue(s4);
+        // Saite 5
+        String s5 = notes.getNote(valGrundton + allStrings[4]);
+        combS5.setValue(s5);
+        // Saite 6
+        String s6 = notes.getNote(valGrundton + allStrings[5]);
+        combS6.setValue(s6);
     }
 
 
