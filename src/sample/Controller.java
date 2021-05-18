@@ -3,12 +3,11 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 
 import java.net.URL;
+import java.util.Arrays;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -22,6 +21,8 @@ public class Controller implements Initializable {
     ComboBox<String> combStimmung;
     @FXML
     ComboBox<String> combGrundton;
+    @FXML
+    Button btnSaveTuning;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -33,6 +34,40 @@ public class Controller implements Initializable {
         combS4.getItems().addAll(notes.getAllNotes());
         combS5.getItems().addAll(notes.getAllNotes());
         combS6.getItems().addAll(notes.getAllNotes());
+        btnSaveTuning.setOnAction(event -> {
+            startTextInputField();
+        });
+    }
+
+    public void startTextInputField() {
+        TextInputDialog dialog = new TextInputDialog("Mein Gott, Walter!");
+        dialog.setTitle("Titel des Dialogs");
+        dialog.setHeaderText("HeaderText");
+        dialog.setContentText("Stimmung speichern.");
+        Optional<String> result = dialog.showAndWait();
+        if (result.isPresent()) {
+            System.out.println("Stimmung wird gespeichert!");
+            System.out.println(result.get());
+            System.out.println(Arrays.toString(getValStrings()));
+        }
+    }
+
+    public int[] getValStrings() {
+        int[] saiten = new int[6];
+        String noteS1 = combS1.getValue();
+        saiten[0] = notes.getVal(noteS1);
+        String noteS2 = combS2.getValue();
+        saiten[1] = notes.getVal(noteS2);
+        String noteS3 = combS3.getValue();
+        saiten[2] = notes.getVal(noteS3);
+        String noteS4 = combS4.getValue();
+        saiten[3] = notes.getVal(noteS4);
+        String noteS5 = combS5.getValue();
+        saiten[4] = notes.getVal(noteS5);
+        String noteS6 = combS6.getValue();
+        saiten[5] = notes.getVal(noteS6);
+
+        return saiten;
     }
 
     @FXML

@@ -32,90 +32,88 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="sample.Controller">
+<VBox prefHeight="424.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="New"/>
-                        <MenuItem mnemonicParsing="false" text="Open…"/>
-                        <Menu mnemonicParsing="false" text="Open Recent"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Close"/>
-                        <MenuItem mnemonicParsing="false" text="Save"/>
-                        <MenuItem mnemonicParsing="false" text="Save As…"/>
-                        <MenuItem mnemonicParsing="false" text="Revert"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Preferences…"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Quit"/>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Undo"/>
-                        <MenuItem mnemonicParsing="false" text="Redo"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Cut"/>
-                        <MenuItem mnemonicParsing="false" text="Copy"/>
-                        <MenuItem mnemonicParsing="false" text="Paste"/>
-                        <MenuItem mnemonicParsing="false" text="Delete"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Select All"/>
-                        <MenuItem mnemonicParsing="false" text="Unselect All"/>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="398.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
             <children>
                 <VBox layoutX="57.0" layoutY="91.0" prefHeight="200.0" prefWidth="224.0">
                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 1"/>
-                        <ComboBox fx:id="combS1" prefWidth="150.0"/>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 2"/>
-                        <ComboBox fx:id="combS2" prefWidth="150.0"/>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 3"/>
-                        <ComboBox fx:id="combS3" prefWidth="150.0"/>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 4"/>
-                        <ComboBox fx:id="combS4" prefWidth="150.0"/>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 5"/>
-                        <ComboBox fx:id="combS5" prefWidth="150.0"/>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 6"/>
-                        <ComboBox fx:id="combS6" prefWidth="150.0"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 1" />
+                        <ComboBox fx:id="combS1" prefWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 2" />
+                        <ComboBox fx:id="combS2" prefWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 3" />
+                        <ComboBox fx:id="combS3" prefWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 4" />
+                        <ComboBox fx:id="combS4" prefWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 5" />
+                        <ComboBox fx:id="combS5" prefWidth="150.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saite 6" />
+                        <ComboBox fx:id="combS6" prefWidth="150.0" />
                     </children>
                 </VBox>
                 <VBox layoutX="58.0" layoutY="26.0" prefHeight="27.0" prefWidth="150.0">
                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stimmung"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stimmung" />
                     </children>
                 </VBox>
-                <ComboBox fx:id="combStimmung" editable="true" layoutX="58.0" layoutY="47.0" prefWidth="150.0"
-                          AnchorPane.leftAnchor="58.0" AnchorPane.topAnchor="47.0" onAction="#combTuneAction"/>
+                <ComboBox fx:id="combStimmung" editable="true" layoutX="58.0" layoutY="47.0" onAction="#combTuneAction" prefWidth="150.0" AnchorPane.leftAnchor="58.0" AnchorPane.topAnchor="47.0" />
                 <VBox layoutX="224.0" layoutY="22.0" prefHeight="22.0" prefWidth="100.0">
                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grundton"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grundton" />
                     </children>
                 </VBox>
-                <ComboBox fx:id="combGrundton" editable="true" layoutX="224.0" layoutY="48.0" prefWidth="150.0" onAction="#combTuneAction"/>
+                <ComboBox fx:id="combGrundton" editable="true" layoutX="224.0" layoutY="48.0" onAction="#combTuneAction" prefWidth="150.0" />
+            <Button fx:id="btnSaveTuning" layoutX="58.0" layoutY="359.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="292.0" text="Als neue Stimmung speichern" />
             </children>
         </AnchorPane>
     </children>
